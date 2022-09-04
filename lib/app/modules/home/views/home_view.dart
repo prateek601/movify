@@ -14,6 +14,7 @@ class HomeView extends GetView<HomeController> {
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
+          controller: controller.scrollController,
           children: [
             const Padding(
               padding: EdgeInsets.only(top: 30),
@@ -30,8 +31,13 @@ class HomeView extends GetView<HomeController> {
                   ? const MovieListShimmer()
                   : controller.isError
                       ? const Text('Error in fetching data')
-                      : MovieListWidget(controller.movieResponse.results!),
+                      : MovieListWidget(controller.movies),
             ),
+            Obx(
+              () => controller.isAtBottom
+                  ? const MovieListShimmer()
+                  : const SizedBox(),
+            )
           ],
         ),
       ),

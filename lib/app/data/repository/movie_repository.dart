@@ -7,9 +7,9 @@ import 'package:movify_app/utils/helper/exception_handler.dart';
 class MovieRepository {
   MovieRepository._privateConstructor();
 
-  static Future<RepoResponse<MovieResponse>> getPopularMovies() async {
+  static Future<RepoResponse<MovieResponse>> getPopularMovies(Map<String, dynamic> query) async {
     var response =
-    await NetworkRequester.authenticated.get(path: URLs.getPopularMovies);
+    await NetworkRequester.authenticated.get(path: URLs.getPopularMovies,query: query);
 
     return response is APIException
         ? RepoResponse(error: response)
