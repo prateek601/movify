@@ -38,7 +38,7 @@ class MovieDetailView extends GetView<MovieDetailController> {
                       controller.movie.title ?? 'Movie title',
                       style: const TextStyle(
                         color: Colors.white,
-                        fontSize: 16,
+                        fontSize: 20,
                       ),
                     ),
                   ),
@@ -48,8 +48,8 @@ class MovieDetailView extends GetView<MovieDetailController> {
                       controller.movie.overview ?? '',
                       style: const TextStyle(
                         color: Colors.white60,
-                        fontSize: 12,
-                        letterSpacing: 0.5,
+                        fontSize: 14,
+                        letterSpacing: 0.8,
                       ),
                     ),
                   ),
