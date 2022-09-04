@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movify_app/app/data/models/dto/movie_details_data.dart';
 import 'package:movify_app/app/data/models/response/movie_response.dart';
 import 'package:movify_app/app/routes/app_pages.dart';
 import 'package:movify_app/utils/image/custom_network_image.dart';
@@ -19,7 +20,7 @@ class MovieCard extends StatelessWidget {
     return InkWell(
       onTap: () => Get.toNamed(
         Routes.movieDetail,
-        arguments: movieList[index],
+        arguments: MovieDetailsData(movie: movieList[index], index: index),
       ),
       child: Container(
         height: 220,
@@ -43,7 +44,7 @@ class MovieCard extends StatelessWidget {
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: Hero(
-                    tag: movieList[index].id.toString(),
+                    tag: index.toString(),
                     child: CustomNetworkImage(
                       image: movieList[index].posterPath != null
                           ? movieList[index].posterPath!

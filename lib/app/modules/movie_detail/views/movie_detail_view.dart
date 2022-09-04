@@ -15,7 +15,7 @@ class MovieDetailView extends GetView<MovieDetailController> {
             Stack(
               children: [
                 Hero(
-                  tag: controller.movie.id.toString(),
+                  tag: controller.heroTag,
                   child: CustomNetworkImage(
                     image: controller.movie.posterPath ?? '',
                     height: 400,
