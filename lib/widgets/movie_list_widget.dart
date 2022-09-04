@@ -12,7 +12,7 @@ class MovieListWidget extends StatelessWidget {
       return const Padding(
         padding: EdgeInsets.only(top: 200),
         child: Text(
-          'No trending movie found!',
+          'No movie found!',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,

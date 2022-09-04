@@ -62,7 +62,7 @@ class MovieCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    movieList[index].title ?? 'no name',
+                    movieList[index].title ?? '',
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 17,
@@ -93,7 +93,7 @@ class MovieCard extends StatelessWidget {
                     height: 40,
                   ),
                   Text(
-                    movieList[index].releaseDate ?? 'no date',
+                    movieList[index].releaseDate ?? '',
                     style: const TextStyle(
                       color: Colors.orangeAccent,
                       fontSize: 16,
