@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movify_app/app/data/models/response/movie_response.dart';
-import 'package:movify_app/app/data/values/env.dart';
+import 'package:movify_app/utils/image/custom_network_image.dart';
 
 class MovieCard extends StatelessWidget {
   final List<Movie> movieList;
@@ -37,9 +37,9 @@ class MovieCard extends StatelessWidget {
               flex: 4,
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: Image.network(
-                    movieList[index].posterPath != null
-                        ? Env.imageBaseUrl + movieList[index].posterPath!
+                  child: CustomNetworkImage(
+                    image: movieList[index].posterPath != null
+                        ? movieList[index].posterPath!
                         : '',
                     height: 200,
                     width: double.infinity,
