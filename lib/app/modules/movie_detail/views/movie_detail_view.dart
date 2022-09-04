@@ -14,11 +14,14 @@ class MovieDetailView extends GetView<MovieDetailController> {
           children: [
             Stack(
               children: [
-                CustomNetworkImage(
-                  image: controller.movie.posterPath ?? '',
-                  height: 350,
-                  width: double.infinity,
-                  fit: BoxFit.fill,
+                Hero(
+                  tag: controller.movie.id.toString(),
+                  child: CustomNetworkImage(
+                    image: controller.movie.posterPath ?? '',
+                    height: 400,
+                    width: double.infinity,
+                    fit: BoxFit.fill,
+                  ),
                 ),
                 const Positioned(
                   top: 5,

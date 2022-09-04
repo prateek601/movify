@@ -42,12 +42,15 @@ class MovieCard extends StatelessWidget {
               flex: 4,
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: CustomNetworkImage(
-                    image: movieList[index].posterPath != null
-                        ? movieList[index].posterPath!
-                        : '',
-                    height: 200,
-                    width: double.infinity,
+                  child: Hero(
+                    tag: movieList[index].id.toString(),
+                    child: CustomNetworkImage(
+                      image: movieList[index].posterPath != null
+                          ? movieList[index].posterPath!
+                          : '',
+                      height: 200,
+                      width: double.infinity,
+                    ),
                   )),
             ),
             const SizedBox(
