@@ -15,7 +15,7 @@ class NetworkRequester {
   static final NetworkRequester authenticated =
       NetworkRequester._authenticatedRequest();
 
-  static prepareAuthenticatedRequest() {
+  void prepareAuthenticatedRequest() {
     BaseOptions dioOptions = BaseOptions(
         connectTimeout: Timeouts.connectTimeout,
         receiveTimeout: Timeouts.receiveTimeout,
