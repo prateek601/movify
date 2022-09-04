@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movify_app/theme/app_theme.dart';
 
 import 'app/routes/app_pages.dart';
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: AppTheme.theme,
       initialRoute: Routes.home,
       getPages: AppPages.pages,
       defaultTransition: Transition.fade,
