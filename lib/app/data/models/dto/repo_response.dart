@@ -1,4 +1,4 @@
-import 'package:movify_app/app/utils/helper/exception_handler.dart';
+import 'package:movify_app/utils/helper/exception_handler.dart';
 
 class RepoResponse<T> {
   final APIException? error;

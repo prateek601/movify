@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:movify_app/app/data/values/constants.dart';
 import 'package:movify_app/app/data/values/env.dart';
-import 'package:movify_app/app/utils/helper/exception_handler.dart';
+import 'package:movify_app/utils/helper/exception_handler.dart';
 
 class NetworkRequester {
   late Dio _dio;

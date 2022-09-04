@@ -2,7 +2,7 @@ import 'package:movify_app/app/data/models/dto/repo_response.dart';
 import 'package:movify_app/app/data/models/response/movie_response.dart';
 import 'package:movify_app/app/data/network/network_requester.dart';
 import 'package:movify_app/app/data/values/urls.dart';
-import 'package:movify_app/app/utils/helper/exception_handler.dart';
+import 'package:movify_app/utils/helper/exception_handler.dart';
 
 class MovieRepository {
   MovieRepository._privateConstructor();
