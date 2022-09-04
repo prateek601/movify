@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:movify_app/app/data/models/response/movie_response.dart';
+import 'package:movify_app/app/routes/app_pages.dart';
 import 'package:movify_app/utils/image/custom_network_image.dart';
 
 class MovieCard extends StatelessWidget {
@@ -15,18 +17,21 @@ class MovieCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () => Get.toNamed(
+        Routes.movieDetail,
+        arguments: movieList[index],
+      ),
       child: Container(
         height: 220,
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Colors.grey[900],
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            BoxShadow(
-              offset: const Offset(0,2),
-              blurRadius: 8,
-              spreadRadius: 2,
+            color: Colors.grey[900],
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                  offset: const Offset(0, 2),
+                  blurRadius: 8,
+                  spreadRadius: 2,
               color: Colors.grey[800]!
             )
           ]
