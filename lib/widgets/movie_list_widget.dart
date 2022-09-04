@@ -30,7 +30,7 @@ class MovieListWidget extends StatelessWidget {
         },
         separatorBuilder: (context, index) {
           return const SizedBox(
-            height: 20,
+            height: 25,
           );
         },
       );

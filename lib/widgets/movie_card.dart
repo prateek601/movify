@@ -20,7 +20,17 @@ class MovieCard extends StatelessWidget {
         height: 220,
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-            color: Colors.grey[900], borderRadius: BorderRadius.circular(10)),
+          color: Colors.grey[900],
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: [
+            BoxShadow(
+              offset: const Offset(0,2),
+              blurRadius: 8,
+              spreadRadius: 2,
+              color: Colors.grey[800]!
+            )
+          ]
+        ),
         child: Row(
           children: [
             Expanded(
