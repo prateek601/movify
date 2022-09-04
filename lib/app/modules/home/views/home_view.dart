@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movify_app/widgets/movie_list_widget.dart';
+import 'package:movify_app/widgets/shimmer/movie_list_shimmer.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -26,7 +27,7 @@ class HomeView extends GetView<HomeController> {
             ),
             GetBuilder<HomeController>(
               builder: (_) => controller.isLoading
-                  ? const Loader()
+                  ? const MovieListShimmer()
                   : controller.isError
                       ? const Text('Error in fetching data')
                       : MovieListWidget(controller.movieResponse.results!),
