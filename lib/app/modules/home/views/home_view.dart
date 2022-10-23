@@ -35,7 +35,7 @@ class HomeView extends GetView<HomeController> {
             ),
             Obx(
               () => controller.isAtBottom
-                  ? const MovieListShimmer()
+                  ? const Loader()
                   : const SizedBox(),
             )
           ],
@@ -53,7 +53,7 @@ class Loader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(top: 100),
+      padding: EdgeInsets.only(top: 30,bottom: 50),
       child: Center(
         child: CircularProgressIndicator(),
       ),
